@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header-container {
+  background-color: #120323;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  color: #97bf04;
+  margin-left: 15px;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+figure {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+figure img {
+  border: 5px solid #d9043d;
+  /* flex-basis: 20%;
+  max-width: 20%;
+  height: auto; */
+}
+
+figcaption {
+  align-items: flex-start;
+  margin-left: 20px;
+}
+figcaption p {
+  padding-top: 10px;
+}
+/* Styles for screens above 1000px */
+@media screen and (min-width: 1001px) {
+  #container {
+    flex-direction: row; /* 3-column layout */
+  }
+
+  main {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  figure img {
+    border: 10px solid #d9043d;
+    width: 100%; /* Adjust as necessary */
+  }
+
+  aside {
+    background-color: #97bf04;
+    flex: 0 0 25%; /* Sidebar takes 25% of the container */
+    padding: 10px;
+  }
+}
+
+/* Styles for screens between 768px and 1000px */
+@media screen and (max-width: 1000px) {
+  #container {
+    flex-direction: column; /* Change to vertical layout */
+  }
+
+  main {
+    flex: 1;
+    padding: 10px;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the figure */
+    margin: 20px;
+  }
+
+  figure img {
+    border: 10px solid #d9043d;
+    width: 90%; /* Adjust as necessary */
+  }
+
+  figcaption {
+    text-align: center; /* Center the text in figcaption */
+  }
+
+  aside {
+    background-color: #97bf04;
+    padding: 10px;
+    margin: 10px; /* Add margin to separate from main content */
+  }
+}
+
+/* Styles for screens below 768px */
+@media screen and (max-width: 768px) {
+  #container {
+    display: flex;
+    flex-direction: column; /* Ensure column layout */
+    flex: 1;
+    width: 100%;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the main content */
+  }
+
+  figure {
+    margin: 20px;
+  }
+
+  figure img {
+    border: 10px solid #d9043d;
+    width: 100%; /* Make the image take up 100% of the width */
+  }
+
+  figcaption {
+    text-align: center; /* Center the text in figcaption */
+  }
+
+  aside {
+    background-color: #97bf04;
+    padding: 10px;
+    margin: 10px; /* Add margin to separate from main content */
+  }
+}
+
+footer {
+  background-color: #d9043d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* Push footer to the bottom */
+}
