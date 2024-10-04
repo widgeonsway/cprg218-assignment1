@@ -2,7 +2,7 @@
   --primary-color: #120323;
   --secondary-color: #97bf04;
   --accent-color: #d9043d;
-  --footer-padding: 30px;
+  --footer-padding: 35px;
   --header-padding: 30px;
   --figure-margin: 30px;
 }
@@ -37,6 +37,9 @@ h1 {
 h2 {
   color: var(--primary-color);
 }
+h3 {
+  padding-top: 10px;
+}
 main {
   display: flex;
   align-items: flex-start;
@@ -53,16 +56,17 @@ figure {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  margin: var (--figure-margin);
 }
 
 figure img {
   border: 5px solid var(--accent-color);
   min-width: 20%;
+  min-width: 300px;
   height: auto;
 }
 
 figcaption {
-  align-items: flex-start;
   margin-left: 20px;
 }
 
@@ -73,12 +77,13 @@ figcaption p {
 
 aside {
   background-color: var(--secondary-color);
-  flex: 0 0 20%;
-  padding: var(--aside-padding);
+  flex: 0 0 22%;
+  padding: 10px 20px;
   margin-left: 50px;
+  max-height: min-content;
 }
 aside p {
-  padding-top: 20px;
+  padding-top: 30px;
   padding-right: 20px;
   padding-bottom: 10px;
 }
@@ -131,9 +136,9 @@ footer {
     padding-top: 10px;
     margin: 0;
   }
-  h3 {
-    margin: 10px 0;
-  }
+  /* h3 {
+    margin: 0;
+  } */
   figcaption {
     padding: 0 0 10px;
     margin: 0 20px;
@@ -149,8 +154,12 @@ footer {
   aside {
     width: 100%;
     margin: 0 0 10px;
-    padding: 10px;
     font-size: small;
+  }
+  aside p {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
   }
 
   footer {
@@ -167,42 +176,45 @@ footer {
   #container {
     margin: 0;
   }
+  h2 {
+    font-size: larger;
+  }
   figure {
     width: 100%;
-    padding-right: 30px;
+    padding-right: 10px;
     margin: var(--figure-margin);
-    max-height: 300px;
+    max-height: 400px;
   }
   figure img {
     max-width: 300px;
+    min-width: 300px;
+    margin-bottom: 10px;
   }
   figcaption p {
     max-width: 100%;
-    font-size: small;
+    font-size: medium;
     padding-top: 20px;
-    padding-right: 30px;
+    padding-right: 10px;
   }
 
   #container {
     display: flex;
     flex-direction: column;
   }
-  h2 {
-    font-size: medium;
-  }
+
   h3 {
+    font-size: large;
     padding: 10px;
   }
   aside {
     width: 100%;
     height: auto;
-    font-size: small;
+    font-size: medium;
     margin: 0 0 10px;
   }
 
   aside p {
-    padding-bottom: 10px;
-    padding-left: 10px;
+    padding: 10px;
   }
   footer {
     margin-top: auto;
