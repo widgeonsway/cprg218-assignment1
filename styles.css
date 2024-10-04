@@ -14,19 +14,12 @@
   padding: 0;
 }
 
-body {
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .header-container {
   background-color: var(--primary-color);
   padding: var(--header-padding);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 h1 {
@@ -40,14 +33,9 @@ h2 {
 h3 {
   padding-top: 10px;
 }
-main {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
+
 #container {
   display: flex;
-  flex-direction: row;
   width: 100%;
   margin: 30px;
 }
@@ -61,9 +49,7 @@ figure {
 
 figure img {
   border: 5px solid var(--accent-color);
-  min-width: 20%;
   min-width: 300px;
-  height: auto;
 }
 
 figcaption {
@@ -72,7 +58,6 @@ figcaption {
 
 figcaption p {
   padding-top: 10px;
-  min-width: 60%;
 }
 
 aside {
@@ -80,10 +65,9 @@ aside {
   flex: 0 0 22%;
   padding: 10px 20px;
   margin-left: 50px;
-  max-height: min-content;
 }
 aside p {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
 }
@@ -93,7 +77,6 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: var(--footer-padding);
-  margin-top: 10px;
 }
 
 /* SCREENS LESS THAN 768PX */
@@ -120,10 +103,7 @@ footer {
   }
   figure {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 0;
     margin: 20px 10px;
   }
 
@@ -134,21 +114,13 @@ footer {
   h2 {
     font-size: medium;
     padding-top: 10px;
-    margin: 0;
   }
-  /* h3 {
-    margin: 0;
-  } */
+
   figcaption {
-    padding: 0 0 10px;
     margin: 0 20px;
   }
   figcaption p {
-    height: 15%;
-    max-width: 100%;
     font-size: small;
-    padding-top: 10px;
-    margin: 0px;
   }
 
   aside {
@@ -170,53 +142,20 @@ footer {
 
 /* SCREENS LESS THAN 1000px */
 @media screen and (min-width: 768px) and (max-width: 1000px) {
-  .header-container {
-    flex-direction: row;
-  }
   #container {
     margin: 0;
   }
-  h2 {
-    font-size: larger;
-  }
+
   figure {
-    width: 100%;
-    padding-right: 10px;
     margin: var(--figure-margin);
-    max-height: 400px;
-  }
-  figure img {
-    max-width: 300px;
-    min-width: 300px;
-    margin-bottom: 10px;
-  }
-  figcaption p {
-    max-width: 100%;
-    font-size: medium;
-    padding-top: 20px;
-    padding-right: 10px;
   }
 
   #container {
-    display: flex;
     flex-direction: column;
   }
 
-  h3 {
-    font-size: large;
-    padding: 10px;
-  }
   aside {
-    width: 100%;
-    height: auto;
     font-size: medium;
     margin: 0 0 10px;
-  }
-
-  aside p {
-    padding: 10px;
-  }
-  footer {
-    margin-top: auto;
   }
 }
